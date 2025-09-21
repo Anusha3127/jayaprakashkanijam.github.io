@@ -3,175 +3,189 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Publications — Dr. Jayaprakash Kanijam Raghupathi</title>
-  <meta name="description" content="Peer‑reviewed publications and works in progress by Dr. Jayaprakash Kanijam Raghupathi." />
+  <title>Publications — Analytical Chemistry & Mass Spectrometry</title>
+  <meta name="description" content="Peer‑reviewed publications and works in progress in LC‑MS, GC‑MS, E&L, impurity profiling, and regulatory methods." />
   <link rel="icon" href="favicon.ico" />
+  <meta name="color-scheme" content="light dark" />
   <style>
-    :root {
-      --bg:#f8fafc; --fg:#111827; --muted:#6b7280; --link:#0a66c2;
-      --card:#ffffff; --border:#e5e7eb; --maxw: 980px;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root { --bg:#0b0d10; --fg:#e6e6e6; --muted:#a3a3a3; --link:#86b7ff; --card:#10151b; --border:#1f2937; }
-    }
-    * { box-sizing: border-box; }
-    body { margin:0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--fg); background:var(--bg); }
-    header, main, footer { max-width: var(--maxw); margin: 0 auto; padding: 1.5rem; }
-    header { display:flex; align-items:center; gap:1rem; flex-wrap:wrap; }
-    header a { color: var(--link); text-decoration: none; }
-    header a:hover { text-decoration: underline; }
-    .home { padding:.35rem .6rem; border:1px solid var(--border); border-radius:.5rem; }
-    h1 { margin:.5rem 0 0; font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.2rem); }
-    .byline { color:var(--muted); margin: .15rem 0 .75rem; }
-    section { margin: 1.5rem 0; }
-    h2 { font-size: 1.25rem; margin: 0 0 .6rem; }
-    .card { background: var(--card); border:1px solid var(--border); border-radius: 12px; padding: 1rem; }
-    .publist { list-style:none; padding:0; margin:0; }
-    .pub { padding:.75rem; border-radius:.75rem; }
-    .pub + .pub { border-top: 1px dashed var(--border); }
-    .title { font-weight: 600; }
-    .venue { color: var(--muted); }
-    a { color: var(--link); }
-    .year { margin: .75rem 0 .25rem; font-weight:700; }
-    .controls { display:flex; gap:.75rem; flex-wrap:wrap; margin:.5rem 0 1rem; }
-    input[type="search"] { padding:.5rem .6rem; border:1px solid var(--border); border-radius:.5rem; background:transparent; color:var(--fg); }
-    footer { border-top:1px solid var(--border); color:var(--muted); font-size:.95rem; text-align:center; }
+    :root{ --bg:#0b0f14; --fg:#e6eef6; --muted:#9fb0c3; --card:#111823; --border:#1e2a39; --brand:#7dd3fc; --accent:#a78bfa; --maxw:1100px; }
+    @media (prefers-color-scheme: light){ :root{ --bg:#f7fbff; --fg:#0f172a; --muted:#51607a; --card:#ffffff; --border:#e5eef7; --brand:#0ea5e9; --accent:#6d28d9; } }
+    *{ box-sizing:border-box }
+    html,body{ margin:0; padding:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial }
+    a{ color:var(--brand); text-decoration:none }
+    a:hover{ text-decoration:underline }
+    header,main,footer{ max-width:var(--maxw); margin:0 auto; padding:1.5rem }
+
+    /* Top bar */
+    header{ display:flex; gap:1rem; align-items:center; flex-wrap:wrap }
+    .home{ padding:.4rem .65rem; border:1px solid var(--border); border-radius:.55rem; background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(0,0,0,.04)) }
+    h1{ margin:.5rem 0 0; font-size:clamp(1.6rem,1.2rem+1.4vw,2.2rem) }
+    .byline{ color:var(--muted) }
+
+    /* Controls */
+    .controls{ display:flex; flex-wrap:wrap; gap:.6rem; margin:.75rem 0 1rem }
+    input[type="search"], select{ padding:.55rem .65rem; border:1px solid var(--border); border-radius:.55rem; background:transparent; color:var(--fg) }
+    .clear{ padding:.5rem .7rem; border:1px solid var(--border); border-radius:.55rem; background:transparent }
+
+    /* List */
+    .card{ background:var(--card); border:1px solid var(--border); border-radius:14px; padding:1rem }
+    .year{ margin:1rem 0 .4rem; font-weight:700; letter-spacing:.02em }
+    .publist{ list-style:none; padding:0; margin:0 }
+    .pub{ display:grid; gap:.25rem; padding:.75rem; border-radius:.75rem }
+    .pub + .pub{ border-top:1px dashed var(--border); padding-top:.9rem; margin-top:.9rem }
+    .title{ font-weight:600 }
+    .venue{ color:var(--muted) }
+
+    /* Footer */
+    footer{ color:var(--muted); border-top:1px solid var(--border); text-align:center }
+
+    /* Back to top */
+    .topbtn{ position:fixed; right:1rem; bottom:1rem; padding:.55rem .7rem; border:1px solid var(--border); border-radius:.6rem; background:var(--card) }
   </style>
 </head>
 <body>
   <header>
-    <a class="home" href="index.html" aria-label="Go back to home">← Home</a>
+    <a class="home" href="index.html" aria-label="Back to Home">← Home</a>
     <div>
       <h1>Publications</h1>
-      <div class="byline">Dr. Jayaprakash Kanijam Raghupathi · <a href="https://scholar.google.com/citations?user=o3peOigAAAAJ&hl=en&oi=ao">Google Scholar</a> · <a href="https://orcid.org/0009-0005-7313-6472">ORCID</a></div>
+      <div class="byline">Selected works in analytical chemistry · LC‑MS · GC‑MS · E&L</div>
       <div class="controls">
-        <label>
-          <span class="sr-only">Search</span>
-          <input id="search" type="search" placeholder="Filter by title, venue, year, keyword…" />
-        </label>
+        <input id="q" type="search" placeholder="Filter by title, venue, keyword…" aria-label="Filter publications" />
+        <select id="year">
+          <option value="">All years</option>
+          <option>2025</option>
+          <option>2024</option>
+        </select>
+        <button class="clear" id="clear">Clear</button>
       </div>
     </div>
   </header>
 
   <main class="card">
-    <section aria-labelledby="published">
-      <h2 id="published">Published</h2>
+    <div class="year">2025</div>
+    <ul class="publist">
+      <li class="pub" data-year="2025">
+        <span class="title">Combination of ethylene glycol and TBAB‑mediated pyrimidine‑fused heterocyclic derivatives: synthesis, in silico, and in vitro anti‑diabetic and anti‑microbial studies</span>.
+        <span class="venue"><em>Results in Chemistry</em>, 2025.</span>
+        <a href="https://doi.org/10.1016/j.rechem.2025.102082">DOI</a>
+      </li>
+      <li class="pub" data-year="2025">
+        <span class="title">Pyrimidine‑fused heterocyclic derivatives: design, in silico, in vitro, anti‑microbial, anti‑diabetic and anti‑biofilm studies</span>.
+        <span class="venue"><em>Results in Chemistry</em>, 2025.</span>
+        <a href="https://doi.org/10.1016/j.rechem.2025.102106">DOI</a>
+      </li>
+      <li class="pub" data-year="2025">
+        <span class="title">Utilizing quality by design methodology for liquid chromatography method development and validation in quantifying impurities in Pitolisant</span>.
+        <span class="venue"><em>Results in Chemistry</em>, 2025.</span>
+        <a href="https://doi.org/10.1016/j.rechem.2025.102350">DOI</a>
+      </li>
+      <li class="pub" data-year="2025">
+        <span class="title">Characterization and analytical method validation for potential impurities of Fluoxetine HCl</span>.
+        <span class="venue"><em>Biomedical Chromatography</em>, 39: e6069, 2025.</span>
+        <a href="https://doi.org/10.1002/bmc.6069">DOI</a>
+      </li>
+    </ul>
 
-      <div class="year">2025</div>
-      <ul class="publist">
-        <li class="pub" data-year="2025">
-          <span class="title">Combination of Ethylene glycol and TBAB‑mediated pyrimidine fused heterocyclic derivatives: Synthesis, in silico, and in vitro anti‑diabetic and anti‑microbial studies</span>.
-          <span class="venue"><em>Results in Chemistry</em>, 2025.</span>
-          <a href="https://doi.org/10.1016/j.rechem.2025.102082">DOI</a>
-        </li>
-        <li class="pub" data-year="2025">
-          <span class="title">Pyrimidine fused heterocyclic derivatives: Design, in silico, in vitro, anti‑microbial, anti‑diabetic and anti‑biofilm studies</span>.
-          <span class="venue"><em>Results in Chemistry</em>, 2025.</span>
-          <a href="https://doi.org/10.1016/j.rechem.2025.102106">DOI</a>
-        </li>
-        <li class="pub" data-year="2025">
-          <span class="title">Utilizing quality by design methodology for LC method development and validation in quantifying impurities in Pitolisant</span>.
-          <span class="venue"><em>Results in Chemistry</em>, 2025.</span>
-          <a href="https://doi.org/10.1016/j.rechem.2025.102350">DOI</a>
-        </li>
-        <li class="pub" data-year="2025">
-          <span class="title">Characterization and Analytical Method Validation for Potential Impurities of Fluoxetine HCl</span>.
-          <span class="venue"><em>Biomedical Chromatography</em>, 39: e6069, 2025.</span>
-          <a href="https://doi.org/10.1002/bmc.6069">DOI</a>
-        </li>
-      </ul>
+    <div class="year">2024</div>
+    <ul class="publist">
+      <li class="pub" data-year="2024">
+        <span class="title">Isolation, identification, and characterization of forced degradation products of Bosentan</span>.
+        <span class="venue"><em>Sep Sci Plus</em>, 7: e202400194, 2024.</span>
+        <a href="https://doi.org/10.1002/sscp.202400194">DOI</a>
+      </li>
+      <li class="pub" data-year="2024">
+        <span class="title">Utilizing cutting‑edge analytical techniques for identification, isolation, and structural characterization of donepezil HCl forced degradation products</span>.
+        <span class="venue"><em>Microchemical Journal</em>, 207, 111665, 2024.</span>
+        <a href="https://doi.org/10.1016/j.microc.2024.111665">DOI</a>
+      </li>
+      <li class="pub" data-year="2024">
+        <span class="title">Stability‑indicating RP‑HPLC method development and validation for quantification of impurities in Elagolix: robustness by QbD</span>.
+        <span class="venue"><em>Biomedical Chromatography</em>, 38(12): e6036, 2024.</span>
+        <a href="https://doi.org/10.1002/bmc.6036">DOI</a>
+      </li>
+      <li class="pub" data-year="2024">
+        <span class="title">Nanocomposites as photocatalyst for environmental applications: a review</span>.
+        <span class="venue"><em>ChemistrySelect</em>, 9: e202403521, 2024.</span>
+        <a href="https://doi.org/10.1002/slct.202403521">DOI</a>
+      </li>
+      <li class="pub" data-year="2024">
+        <span class="title">Composition of human‑associated gut microbiota determines 3‑DF and 3‑HF anti‑colitic activity in IL‑10 −/− mice</span>.
+        <span class="venue"><em>Nutrients</em>, 16: 4232, 2024.</span>
+        <a href="https://doi.org/10.3390/nu16234232">DOI</a>
+      </li>
+      <li class="pub" data-year="2024">
+        <span class="title">Degradation study of Dapagliflozin: structural characterization of Dapagliflozin and its degradation products with in silico toxicity prediction</span>.
+        <span class="venue"><em>Sep Sci Plus</em>, 8: e202400275, 2024.</span>
+        <a href="https://doi.org/10.1002/sscp.202400275">DOI</a>
+      </li>
+      <li class="pub" data-year="2024">
+        <span class="title">Design, synthesis, and biological evaluation of novel heterocyclic derivatives of 2,4‑thiazolidine‑dione as anti‑cancer agents</span>.
+        <span class="venue"><em>Applied Research</em>, e202400176, 2024.</span>
+        <a href="https://doi.org/10.1002/appl.202400176">DOI</a>
+      </li>
+      <li class="pub" data-year="2024">
+        <span class="title">Development of LC/LC‑MS method for estimation of impurities in anti‑HIV drug (Bictegravir) using AQbD</span>.
+        <span class="venue"><em>Chinese Journal of Analytical Chemistry</em>, 2024.</span>
+        <a href="https://doi.org/10.1016/j.cjac.2024.100469">DOI</a>
+      </li>
+      <li class="pub" data-year="2024">
+        <span class="title">QbD‑driven RP‑HPLC method development and validation for impurity analysis of Elexacaftor with LC‑MS/MS‑based degradant identification</span>.
+        <span class="venue"><em>ACS Omega</em>, 2024.</span>
+        <a href="https://pubs.acs.org/doi/10.1021/acsomega.4c10834">DOI</a>
+      </li>
+    </ul>
 
-      <div class="year">2024</div>
-      <ul class="publist">
-        <li class="pub" data-year="2024">
-          <span class="title">Isolation, Identification, and Characterization of Forced Degradation Products of Bosentan</span>.
-          <span class="venue"><em>Sep Sci Plus</em>, 7: e202400194, 2024.</span>
-          <a href="https://doi.org/10.1002/sscp.202400194">DOI</a>
-        </li>
-        <li class="pub" data-year="2024">
-          <span class="title">Identification, isolation, and structural characterization of donepezil HCl forced degradation products</span>.
-          <span class="venue"><em>Microchemical Journal</em>, 207, 111665, 2024.</span>
-          <a href="https://doi.org/10.1016/j.microc.2024.111665">DOI</a>
-        </li>
-        <li class="pub" data-year="2024">
-          <span class="title">Stability‑indicating RP‑HPLC method for quantification of impurities in Elagolix: a QbD robustness study</span>.
-          <span class="venue"><em>Biomedical Chromatography</em>, 38(12): e6036, 2024.</span>
-          <a href="https://doi.org/10.1002/bmc.6036">DOI</a>
-        </li>
-        <li class="pub" data-year="2024">
-          <span class="title">Nanocomposites as Photocatalyst for Environmental Applications: A Review</span>.
-          <span class="venue"><em>ChemistrySelect</em>, 9: e202403521, 2024.</span>
-          <a href="https://doi.org/10.1002/slct.202403521">DOI</a>
-        </li>
-        <li class="pub" data-year="2024">
-          <span class="title">Composition of human‑associated gut microbiota determines 3‑DF and 3‑HF anti‑colitic activity in IL‑10 −/− mice</span>.
-          <span class="venue"><em>Nutrients</em>, 16: 4232, 2024.</span>
-          <a href="https://doi.org/10.3390/nu16234232">DOI</a>
-        </li>
-        <li class="pub" data-year="2024">
-          <span class="title">Degradation study of Dapagliflozin: structural characterization of Dapagliflozin and its degradation products with in silico toxicity prediction</span>.
-          <span class="venue"><em>Sep Sci Plus</em>, 8: e202400275, 2024.</span>
-          <a href="https://doi.org/10.1002/sscp.202400275">DOI</a>
-        </li>
-        <li class="pub" data-year="2024">
-          <span class="title">Design, synthesis, and biological evaluation of novel heterocyclic derivatives of 2,4‑thiazolidine‑dione as anti‑cancer agents</span>.
-          <span class="venue"><em>Applied Research</em>, e202400176, 2024.</span>
-          <a href="https://doi.org/10.1002/appl.202400176">DOI</a>
-        </li>
-        <li class="pub" data-year="2024">
-          <span class="title">Development of LC/LC‑MS method for estimation of impurities in anti‑HIV drug (Bictegravir) using AQbD</span>.
-          <span class="venue"><em>Chinese Journal of Analytical Chemistry</em>, 2024.</span>
-          <a href="https://doi.org/10.1016/j.cjac.2024.100469">DOI</a>
-        </li>
-        <li class="pub" data-year="2024">
-          <span class="title">QbD‑driven RP‑HPLC method development and validation for impurity analysis of Elexacaftor with LC‑MS/MS‑based degradant identification</span>.
-          <span class="venue"><em>ACS Omega</em>, 2024.</span>
-          <a href="https://pubs.acs.org/doi/10.1021/acsomega.4c10834">DOI</a>
-        </li>
-      </ul>
-    </section>
-
-    <section aria-labelledby="inprogress">
-      <h2 id="inprogress">Under Review / In Progress</h2>
-      <ul class="publist">
-        <li class="pub">
-          <span class="title">Analytical method development and validation for primary, secondary, and conjugated bile acids in BSA using ESI LC‑MS</span>.
-          <span class="venue">Developed at Purdue University in collaboration with Dr. Lavanya Reddivari; currently under review.</span>
-        </li>
-        <li class="pub">
-          <span class="title">Quantification of Vitamin D in food and biological samples</span>.
-          <span class="venue">Method development for sensitive detection and quantitation across diverse matrices.</span>
-        </li>
-        <li class="pub">
-          <span class="title">Isoflavone profiling in clinical and nutritional studies</span>.
-          <span class="venue">Quantification of daidzein, equol, and genistein in serum for biomarker evaluation.</span>
-        </li>
-        <li class="pub">
-          <span class="title">Comparative bile acid estimation in multiple serum types</span>.
-          <span class="venue">Assessment of metabolic variations across species.</span>
-        </li>
-      </ul>
-    </section>
+    <h2 style="margin-top:1.4rem">Under Review / In Progress</h2>
+    <ul class="publist">
+      <li class="pub">
+        <span class="title">Analytical method development and validation for primary, secondary, and conjugated bile acids in BSA using ESI LC‑MS</span> — developed at Purdue University (with Dr. Lavanya Reddivari); under review.
+      </li>
+      <li class="pub">
+        <span class="title">Quantification of Vitamin D in food and biological samples</span> — method development across diverse matrices.
+      </li>
+      <li class="pub">
+        <span class="title">Isoflavone profiling in clinical and nutritional studies</span> — quantification of daidzein, equol, genistein in serum.
+      </li>
+      <li class="pub">
+        <span class="title">Comparative bile acid estimation in multiple serum types</span> — cross‑species metabolic variations.
+      </li>
+    </ul>
   </main>
 
   <footer>
-    © <span id="year"></span> Jayaprakash Kanijam Raghupathi · <a href="index.html">Back to Home</a>
+    © <span id="year"></span> <!-- Scientist Name --> · <a href="index.html">Back to Home</a>
   </footer>
 
+  <button class="topbtn" id="topbtn" aria-label="Back to top">↑ Top</button>
+
   <script>
-    // Auto year
+    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Simple client-side filter
-    const q = document.getElementById('search');
+    // Filtering by query + year
+    const q = document.getElementById('q');
+    const y = document.getElementById('year');
+    const clear = document.getElementById('clear');
     const pubs = Array.from(document.querySelectorAll('.pub'));
-    q.addEventListener('input', () => {
-      const term = q.value.trim().toLowerCase();
+
+    function applyFilter(){
+      const term = (q.value || '').toLowerCase();
+      const year = y.value;
       pubs.forEach(li => {
         const text = li.textContent.toLowerCase();
-        li.style.display = text.includes(term) ? '' : 'none';
+        const passYear = !year || (li.dataset.year === year);
+        const passText = !term || text.includes(term);
+        li.style.display = (passYear && passText) ? '' : 'none';
       });
-    });
+    }
+
+    q.addEventListener('input', applyFilter);
+    y.addEventListener('change', applyFilter);
+    clear.addEventListener('click', ()=>{ q.value=''; y.value=''; applyFilter(); });
+
+    // Back to top
+    const topbtn = document.getElementById('topbtn');
+    topbtn.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
   </script>
 </body>
 </html>
