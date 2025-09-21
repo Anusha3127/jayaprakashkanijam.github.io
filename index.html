@@ -3,200 +3,98 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title><!-- TODO: Scientist Name --> — Analytical Chemistry & Mass Spectrometry</title>
-  <meta name="description" content="Portfolio website for a research scientist specializing in LC‑MS, GC‑MS, E&L, impurity profiling, and regulatory‑compliant method development in pharma and medical devices." />
+  <title>Jayaprakash Kanijam Raghupathi — About</title>
+  <meta name="description" content="Analytical scientist focusing on LC–MS, GC–MS, E&L, impurity profiling, and regulatory methods in pharma & medical devices." />
   <link rel="icon" href="favicon.ico" />
   <meta name="color-scheme" content="light dark" />
   <style>
-    /* ===== Design Tokens ===== */
-    :root{
-      --bg:#0b0f14;           /* lab-night */
-      --fg:#e6eef6;           /* ice */
-      --muted:#9fb0c3;
-      --card:#111823;         /* graphite */
-      --border:#1e2a39;
-      --brand:#7dd3fc;        /* cyan */
-      --accent:#a78bfa;       /* violet */
-      --maxw:1100px; --gap:1.1rem;
-    }
-    @media (prefers-color-scheme: light){
-      :root{
-        --bg:#f7fbff; --fg:#0f172a; --muted:#51607a; --card:#ffffff; --border:#e5eef7; --brand:#0ea5e9; --accent:#6d28d9;
-      }
-    }
-
+    :root{ --bg:#fbfbfd; --fg:#1b2430; --muted:#6a7382; --link:#0a66c2; --card:#ffffff; --border:#e7e9ef; --rail:#eef2f7; --accent:#2aa198; --maxw:1100px; --railw:280px; }
+    @media (prefers-color-scheme: dark){ :root{ --bg:#0e1116; --fg:#e6ecf3; --muted:#9aa7bb; --link:#86b7ff; --card:#10151b; --border:#1e2530; --rail:#121821; --accent:#79e6d7; } }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-    a{color:var(--brand);text-decoration:none}
+    html,body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    a{color:var(--link);text-decoration:none}
     a:hover{text-decoration:underline}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:2rem var(--gap)}
-
-    /* ===== Scientific Hero with LC/GC chromatogram background ===== */
-    .hero{
-      position:relative; overflow:hidden; border-bottom:1px solid var(--border);
-      background: radial-gradient(1200px 600px at 100% -10%, rgba(125,211,252,.1), transparent 60%),
-                  radial-gradient(1000px 500px at 0% 100%, rgba(167,139,250,.12), transparent 60%),
-                  var(--bg);
-    }
-    .hero::before{ /* chromatogram trace */
-      content:""; position:absolute; inset:0; opacity:.55; pointer-events:none;
-      background-image: url("data:image/svg+xml;utf8,
-        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 400'>
-          <defs>
-            <linearGradient id='g' x1='0' x2='1' y1='0' y2='0'>
-              <stop offset='0%' stop-color='%23a78bfa'/>
-              <stop offset='100%' stop-color='%237dd3fc'/>
-            </linearGradient>
-          </defs>
-          <path d='M0 340 C 120 330, 160 300, 220 310 S 320 340, 360 300 430 120, 470 140 520 320, 560 320 610 250, 650 255 710 340, 760 330 800 220, 820 230 860 340, 900 335 960 160, 980 165 1040 340, 1080 330 1150 290, 1180 300 1240 340, 1290 335 1360 190, 1380 200 1450 340, 1600 330' fill='none' stroke='url(%23g)' stroke-width='4' stroke-linecap='round' opacity='0.85'/>
-          <g opacity='0.16'>
-            <path d='M0 355 L1600 355' stroke='%23ffffff' stroke-width='1'/>
-            <path d='M0 300 L1600 300' stroke='%23ffffff' stroke-width='1'/>
-            <path d='M0 245 L1600 245' stroke='%23ffffff' stroke-width='1'/>
-            <path d='M0 190 L1600 190' stroke='%23ffffff' stroke-width='1'/>
-          </g>
-        </svg>");
-      background-size:cover; background-position:bottom center;
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,.85), rgba(0,0,0,.4), transparent);
-    }
-
-    header .top{display:grid;grid-template-columns:120px 1fr;gap:1.2rem;align-items:center}
-    .headshot{width:120px;height:120px;border-radius:16px;object-fit:cover;border:1px solid var(--border);background:var(--card)}
-    h1{margin:0 0 .25rem;font-size:clamp(1.6rem,1.4rem+1.2vw,2.4rem)}
-    .subtitle{color:var(--muted);margin:.15rem 0 .6rem}
-    .links{display:flex;flex-wrap:wrap;gap:.6rem 1rem}
-    .btn{display:inline-block;padding:.5rem .75rem;border:1px solid var(--border);border-radius:.6rem;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(0,0,0,.04));backdrop-filter:saturate(120%)}
-
-    nav{margin-top:1rem;border-top:1px solid var(--border)}
-    nav ul{display:flex;gap:.8rem;list-style:none;padding:.75rem 0 0;margin:0;flex-wrap:wrap}
-    nav a{padding:.35rem .6rem;border-radius:.5rem}
-    nav a:focus{outline:2px solid var(--brand);outline-offset:2px}
-
-    /* ===== Layout ===== */
-    main{display:grid;gap:1.2rem;margin-top:1.2rem}
-    @media (min-width: 980px){ main{grid-template-columns:1.25fr .9fr} }
-    section,.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1rem}
-    h2{margin:.1rem 0 .6rem;font-size:1.15rem}
-
-    /* Badges */
-    .chips{display:flex;flex-wrap:wrap;gap:.4rem}
-    .chip{display:inline-flex;align-items:center;gap:.4rem;padding:.2rem .55rem;border:1px solid var(--border);border-radius:999px;color:var(--muted);font-size:.92rem}
-    .chip svg{width:16px;height:16px;opacity:.8}
-
-    /* Publication preview list */
-    .pub{display:grid;gap:.25rem;padding:.75rem;border-radius:.75rem}
-    .pub + .pub{border-top:1px dashed var(--border);padding-top:.9rem;margin-top:.9rem}
-    .pub .meta{color:var(--muted);font-size:.95rem}
-
-    footer{margin-top:2rem;border-top:1px solid var(--border)}
-    footer .wrap{padding-top:1rem;font-size:.95rem;color:var(--muted)}
-
-    /* Print tweaks */
-    @media print{ nav,.btn,.chips{display:none!important} body{background:#fff;color:#000} .wrap{max-width:100%;padding:0} }
+    .wrap{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:var(--railw) 1fr;gap:2rem;padding:2rem 1.5rem}
+    .rail{background:var(--rail);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+    .rail .profile{padding:1rem}
+    .rail .headshot{width:100%;aspect-ratio:1/1;border-radius:8px;border:1px solid var(--border);object-fit:cover;background:var(--card)}
+    .rail .name{margin:.7rem 0 .1rem;font-weight:700}
+    .rail .role{margin:0;color:var(--muted);font-size:.93rem}
+    .rail nav{border-top:1px solid var(--border);}
+    .rail nav ul{list-style:none;margin:0;padding:.3rem}
+    .rail nav a{display:block;padding:.5rem .65rem;border-radius:6px}
+    .rail nav a:hover{background:rgba(0,0,0,.03)}
+    @media (prefers-color-scheme: dark){ .rail nav a:hover{background:rgba(255,255,255,.04)} }
+    main{min-width:0}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem}
+    h1{margin:.1rem 0 .6rem;font-size:1.5rem}
+    h2{margin:1.2rem 0 .5rem;font-size:1.06rem;position:relative;padding-left:.8rem}
+    h2::before{content:"";position:absolute;left:0;top:.2rem;bottom:.2rem;width:3px;background:var(--accent);border-radius:2px}
+    .chips{display:flex;flex-wrap:wrap;gap:.35rem}
+    .chip{padding:.18rem .5rem;border:1px solid var(--border);border-radius:999px;color:var(--muted);font-size:.9rem;background:transparent}
+    .list{list-style:disc;margin:.2rem 0 .4rem 1.2rem;padding:0}
+    .muted{color:var(--muted)}
+    footer{max-width:var(--maxw);margin:0 auto;border-top:1px solid var(--border);padding:1rem 1.5rem;color:var(--muted);font-size:.9rem}
+    @media (max-width:900px){ .wrap{grid-template-columns:1fr} }
   </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="wrap">
-      <div class="top" role="banner">
-        <img src="headshot.jpg" alt="Portrait of <!-- TODO: Scientist Name -->" class="headshot" />
-        <div>
-          <h1><!-- TODO: Scientist Name --></h1>
-          <p class="subtitle">Research Scientist • Analytical Chemistry • LC‑MS | GC‑MS | E&L • Pharma & Medical Devices</p>
-          <div class="links" aria-label="Profile links">
-            <a class="btn" href="cv.pdf">CV (PDF)</a>
-            <a class="btn" href="mailto:<!-- TODO: email -->">Email</a>
-            <a class="btn" href="publications.html">Publications</a>
-            <a class="btn" href="https://orcid.org/<!-- TODO -->" rel="me">ORCID</a>
-            <a class="btn" href="https://scholar.google.com/citations?user=<!-- TODO -->">Google Scholar</a>
-            <a class="btn" href="https://github.com/<!-- TODO -->">GitHub</a>
-          </div>
-        </div>
+  <div class="wrap">
+    <aside class="rail" aria-label="Profile and navigation">
+      <div class="profile">
+        <img class="headshot" src="headshot.jpg" alt="Portrait of Jayaprakash Kanijam Raghupathi" />
+        <div class="name">Jayaprakash Kanijam Raghupathi</div>
+        <p class="role">Senior Scientist III, Cardinal Health<br/>Visiting Scholar, Purdue University</p>
       </div>
-      <nav aria-label="In-page">
+      <nav>
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#research">Research</a></li>
-          <li><a href="#highlights">Highlights</a></li>
-          <li><a href="#service">Service</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html">About</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="cv.pdf">CV (PDF)</a></li>
+          <li><a href="mailto:jayaprakash.kanijamraghupathi@cardinalhealth.com">Email</a></li>
+          <li><a href="https://scholar.google.com/citations?user=o3peOigAAAAJ&hl=en">Google Scholar</a></li>
+          <li><a href="https://orcid.org/0009-0005-7313-6472">ORCID</a></li>
         </ul>
       </nav>
-    </div>
-  </header>
-
-  <main class="wrap">
-    <section id="about" class="card">
-      <h2>About</h2>
-      <p><!-- TODO: 3–5 sentence bio focused on your research questions, instrumentation (LC‑MS, GC‑MS, ICP‑MS), E&L expertise, impurity profiling, and regulatory‑compliant method development (FDA/ICH/ISO). --></p>
-    </section>
-
-    <section id="research" class="card">
-      <h2>Research Focus</h2>
-      <div class="chips">
-        <span class="chip"> <!-- LC‑MS icon -->
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17h18M7 17V7m4 10V5m4 12v-8m4 8v-4"/></svg>
-          LC‑MS (QQQ/QTOF)
-        </span>
-        <span class="chip">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="7" cy="12" r="3"/><circle cx="17" cy="12" r="3"/><path d="M7 9c3-6 7 6 10 0"/></svg>
-          GC‑MS & HS‑GC
-        </span>
-        <span class="chip">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V6l8-3 8 3v14l-8 3z"/></svg>
-          Extractables & Leachables (E&L)
-        </span>
-        <span class="chip">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h18M12 3v18"/></svg>
-          Impurity Profiling & Degradants
-        </span>
-        <span class="chip">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h6l3-3 3 3h6v10H3z"/></svg>
-          Regulatory Methods (FDA • ICH • ISO)
-        </span>
-        <span class="chip">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 18l8-12 8 12z"/></svg>
-          Metabolomics (Bile Acids • Polyphenols)
-        </span>
-      </div>
-      <p style="margin-top:.8rem"><!-- TODO: Two to three sentences describing current projects and instrumentation (e.g., Q‑TOF, ICP‑MS, LC‑UV/PDA). Link to papers or repos. --></p>
-    </section>
-
-    <section id="highlights" class="card">
-      <h2>Selected Highlights</h2>
-      <article class="pub">
-        <a class="title" href="publications.html">See full publication list →</a>
-        <div class="meta">Quality‑by‑Design for impurity analysis; forced‑degradation elucidation; LC‑MS/MS degradant ID; E&L per USP 1663/1664, PQRI.</div>
-      </article>
-      <article class="pub">
-        <div class="title">Laboratory Leadership</div>
-        <div class="meta">Built analytical labs end‑to‑end; method validation/transfer; stability programs; cross‑functional regulatory support.</div>
-      </article>
-    </section>
-
-    <section id="service" class="card">
-      <h2>Service</h2>
-      <ul>
-        <li><!-- TODO: Journals you review for / committees / memberships (ACS • RSC • AAPS). --></li>
-      </ul>
-    </section>
-
-    <section id="contact" class="card">
-      <h2>Contact</h2>
-      <address>
-        <!-- TODO: Department / Institution (optional) --><br/>
-        <a href="mailto:<!-- TODO: email -->"><!-- TODO: email --></a>
-      </address>
-      <p>Profiles: <a href="https://orcid.org/<!-- TODO -->">ORCID</a> · <a href="https://scholar.google.com/citations?user=<!-- TODO -->">Google Scholar</a> · <a href="https://www.semanticscholar.org/">Semantic Scholar</a></p>
-    </section>
-  </main>
-
+    </aside>
+    <main>
+      <section class="card">
+        <h1>About</h1>
+        <p>
+          Analytical scientist with 17+ years in pharma and medical devices, specializing in LC–MS, GC–MS, extractables & leachables,
+          impurity profiling, and regulatory‑compliant method development (FDA, ICH, ISO, EU MDR). Author of 13+ peer‑reviewed
+          publications and 5 patents; reviewer for international journals; member of ACS, RSC, AAPS. PhD in progress (Analytical
+          Chemistry, expected 2025) with research in bile acid and polyphenol metabolomics.
+        </p>
+      </section>
+      <section class="card">
+        <h2>Research interests</h2>
+        <p class="chips">
+          <span class="chip">LC–MS/MS (QQQ, QTOF)</span>
+          <span class="chip">GC–MS / HS–GC</span>
+          <span class="chip">Extractables & Leachables (USP 1663/1664, PQRI)</span>
+          <span class="chip">Impurity profiling & degradants</span>
+          <span class="chip">Regulatory methods (FDA • ICH • ISO)</span>
+          <span class="chip">Metabolomics (bile acids, polyphenols)</span>
+        </p>
+      </section>
+      <section class="card">
+        <h2>Selected highlights</h2>
+        <ul class="list">
+          <li>USDA‑NIFA grant co‑investigator (Q‑TOF MS system; 2024–2025).</li>
+          <li>Built analytical labs; led validations, transfers, stability programs.</li>
+          <li>Regulatory: FDA, ISO, EU MDR, USP 1663/1664, PQRI.</li>
+        </ul>
+      </section>
+      <section class="card">
+        <h2>Contact</h2>
+        <p class="muted">28, Kodiak Ln, Milford, MA 01757 · 215‑500‑4743 · <a href="mailto:jayaprakash.kanijamraghupathi@cardinalhealth.com">jayaprakash.kanijamraghupathi@cardinalhealth.com</a></p>
+      </section>
+    </main>
+  </div>
   <footer>
-    <div class="wrap">© <span id="year"></span> <!-- TODO: Scientist Name -->. Last updated <!-- TODO: Month YYYY -->.</div>
+    © <span id="y"></span> Jayaprakash Kanijam Raghupathi
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
